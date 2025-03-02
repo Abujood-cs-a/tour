@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معرض أعمالنا - TourJo CDL</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- AOS (للتأثيرات المتحركة) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        /* ✅ تنسيق الهيدر */
+        header {
+            background-color: #123;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-bottom: 10px;
+        }
+
+        /* ✅ تنسيق الصور */
+        .portfolio-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .portfolio-img:hover {
+            transform: scale(1.1);
+        }
+
+        /* ✅ تنسيق الفوتر */
+        footer {
+            background: #343a40;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 3px 0;
+        }
+
+        /* ✅ فلاتر الصور */
+        .filter-buttons {
+            margin-bottom: 30px;
+        }
+        .filter-buttons button {
+            margin: 5px;
+            padding: 5px 20px;
+            background-color: #ffcc00;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .filter-buttons button:hover {
+            background-color: #e6b800;
+        }
+
+        /* ✅ تخصيص النصوص تحت الصور */
+        .image-description {
+            text-align: center;
+            font-size: 1rem;
+            color: #343a40;
+            margin-top: px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ✅ الهيدر -->
+    <header>
+        <h1 data-aos="fade-down">معرض أعمالنا</h1>
+    </header>
+
+    <!-- ✅ فلاتر الوجهات السياحية -->
+    <div class="container text-center filter-buttons">
+        <button class="filter-btn" onclick="filterImages('all')">عرض الكل</button>
+        <button class="filter-btn" onclick="filterImages('petra')">البتراء</button>
+        <button class="filter-btn" onclick="filterImages('wadi-rum')">وادي رم</button>
+        <button class="filter-btn" onclick="filterImages('dead-sea')">البحر الميت</button>
+    </div>
+
+    <!-- ✅ قسم معرض الصور -->
+    <section class="container text-center my-5" data-aos="fade-up">
+        <h2>أبرز وجهاتنا السياحية</h2>
+
+        <div class="row" id="portfolio-gallery">
+            <div class="col-md-4 mb-4 portfolio-item petra">
+                <img src="https://cdn.alweb.com/thumbs/jordanencyclopedia/article/fit710x532/%D8%A7%D9%84%D8%A8%D8%AA%D8%B1%D8%A7%D8%A1-%D8%AF%D9%84%D9%8A%D9%84%D9%83-%D8%A7%D9%84%D8%B3%D9%8A%D8%A7%D8%AD%D9%8A-%D8%A7%D9%84%D8%B4%D8%A7%D9%85%D9%84.jpg" class="portfolio-img rounded" data-aos="zoom-in" alt="البتراء" height="550px">
+                <div class="image-description">البتراء: المدينة الوردية المدهشة.</div>
+            </div>
+            <div class="col-md-4 mb-4 portfolio-item wadi-rum">
+                <img src="https://cdn.alweb.com/thumbs/jordanencyclopedia/article/fit710x532/%D8%A3%D9%87%D9%85-%D8%A7%D9%84%D9%86%D8%B5%D8%A7%D8%A6%D8%AD-%D9%84%D8%B1%D8%AD%D9%84%D8%A9-%D9%88%D8%A7%D8%AF%D9%8A-%D8%B1%D9%85.jpeg" class="portfolio-img rounded" data-aos="zoom-in" alt="وادي رم" height="550px">
+                <div class="image-description">وادي رم: الصحراء الساحرة.</div>
+            </div>
+            <div class="col-md-4 mb-4 portfolio-item dead-sea">
+                <img src="https://tripawayjo.com/wp-content/uploads/2023/11/16-9.jpg"class="portfolio-img rounded" data-aos="zoom-in" alt="البحر الميت" height="550px">
+                <div class="image-description">البحر الميت: رحلة استرخاء لا تُنسى.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ✅ الفوتر -->
+    <footer>
+        <p>© 2025 جميع الحقوق محفوظة - TourJo CDL</p>
+    </footer>
+
+    <!-- ✅ Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- ✅ AOS Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init(); // تشغيل التأثيرات
+
+        // JavaScript لتصفية الصور حسب الوجهات السياحية
+        function filterImages(category) {
+            var items = document.querySelectorAll('.portfolio-item');
+            items.forEach(function(item) {
+                if (category === 'all') {
+                    item.style.display = 'block';
+                } else if (item.classList.contains(category)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>

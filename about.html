@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>من نحن - TourJo CDL</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- AOS (للتأثيرات المتحركة) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        /* ✅ تنسيق الهيدر */
+        header {
+            background: url('jordan-bg.jpg') center/cover no-repeat;
+            color: white;
+            text-align: center;
+            padding: 80px 0;
+        }
+
+        /* ✅ زر "احجز رحلتك الآن" */
+        .btn-book-now {
+            background: #ffcc00;
+            color: black;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .btn-book-now:hover {
+            background: #e6b800;
+        }
+
+        /* ✅ تنسيق الأقسام */
+        section {
+            padding: 50px 20px;
+        }
+
+        .mission-section, .why-choose-us {
+            background: #f8f9fa;
+            padding: 40px 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .mission-section h3, .why-choose-us h3 {
+            font-size: 1.75rem;
+            color: #343a40;
+        }
+
+        /* ✅ تنسيق الفوتر */
+        footer {
+            background: #343a40;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* ✅ وسائل التواصل الاجتماعي */
+        .social-icons a {
+            font-size: 1.5rem;
+            margin: 0 10px;
+            color: white;
+            transition: color 0.3s;
+        }
+        .social-icons a:hover {
+            color: #ffcc00;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ✅ الهيدر -->
+    <header>
+        <h1 data-aos="fade-down">من نحن</h1>
+        <a href="booking.html" class="btn-book-now" data-aos="fade-up">احجز رحلتك الآن</a>
+    </header>
+
+    <!-- ✅ قسم نبذة عن الشركة -->
+    <section class="container text-center" data-aos="fade-up">
+        <h2>نبذة عن TourJo CDL</h2>
+        <p class="lead">نحن شركة متخصصة في تقديم أفضل الجولات السياحية في الأردن، نوفر لك تجربة سياحية لا تُنسى.</p>
+        <!-- ✅ استبدال الصورة بفيديو تعريفي -->
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/example_video_id" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <!-- ✅ قسم مهمتنا ورؤيتنا -->
+    <section class="mission-section" data-aos="fade-up">
+        <h3>مهمتنا ورؤيتنا</h3>
+        <p>مهمتنا هي تقديم أفضل تجربة سياحية في الأردن. رؤيتنا هي أن نكون الوجهة الأولى للسياحة في المنطقة عبر توفير خدمات عالية الجودة واحترافية.</p>
+    </section>
+
+    <!-- ✅ قسم لماذا تختارنا -->
+    <section class="why-choose-us" data-aos="fade-up">
+        <h3>لماذا تختارنا؟</h3>
+        <ul>
+            <li>دليل سياحي محترف ذو خبرة واسعة في المنطقة.</li>
+            <li>رحلات مصممة خصيصًا لتناسب اهتماماتك.</li>
+            <li>خدمات عالية الجودة وأسطول من وسائل النقل المريحة.</li>
+        </ul>
+    </section>
+
+    <!-- ✅ الفوتر -->
+    <footer>
+        <p>© 2025 جميع الحقوق محفوظة - TourJo CDL</p>
+        <div class="social-icons">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-twitter"></i></a>
+            <a href="#"><i class="bi bi-youtube"></i></a>
+        </div>
+    </footer>
+
+    <!-- ✅ Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- ✅ AOS Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init(); // تشغيل التأثيرات
+    </script>
+
+</body>
+</html>
